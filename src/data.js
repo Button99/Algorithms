@@ -211,5 +211,146 @@ export default {
 
             "            else:\n" +
             "                print(\"Found at \"+ str(start) + \" end \"+ str(i))"
-    }]
+    }],
+    algorithmStack: [{
+        _id: "11",
+        name: "Stack",
+        algo: "def stack(stack):\n" +
+            "    choice= 1\n" +
+            "    while choice != 3:\n" +
+            "        print(\"What you want to do 1.Push\\n 2.Pop\\n3.Close\")\n" +
+            "\n" +
+            "        # First we look the size of the stack\n" +
+            "        print(\"Size of stack: \" + str(len(stack)))\n" +
+            "\n" +
+            "        choice= int(input())\n" +
+            "\n" +
+            "        if choice == 1:\n" +
+            "            print(\"Enter the data \")\n" +
+            "            x= input()\n" +
+            "            stack.append(x)\n" +
+            "\n" +
+            "            # Print the stack size\n" +
+            "            print(\"Stack size: \" + str(len(stack)))\n" +
+            "\n" +
+            "            # Print the top number\n" +
+            "            print(\"Stack top: \" + stack[-1])\n" +
+            "\n" +
+            "        if choice == 2:\n" +
+            "            if len(stack) >= 1 :\n" +
+            "                print(\"Pop: \" + stack.pop())\n" +
+            "\n" +
+            "                # Print the new stack size\n" +
+            "                print(\"New stack size: \"+ str(len(stack)))\n" +
+            "\n" +
+            "                # Print the top\n" +
+            "                print(\"Stack top: \" + str(stack[-1]))"
+    }],
+    algorithmQueue: [{
+        _id: "12",
+        name: "Queue",
+        algo: "def queue(queue):\n" +
+            "\n" +
+            "    choice=1\n" +
+            "    while choice != 3:\n" +
+            "        print(\"What you want to do 1.Insert\\n 2.Dequeue\\n 3.Close\")\n" +
+            "\n" +
+            "        # First we look the size\n" +
+            "        print(\"Size of the queue: \" + str(len(queue)))\n" +
+            "\n" +
+            "        choice= int(input())\n" +
+            "\n" +
+            "        if choice == 1:\n" +
+            "            print(\"Enter your type: \")\n" +
+            "            x= input()\n" +
+            "            queue.append(x)\n" +
+            "\n" +
+            "            # Prints the new size of the queue\n" +
+            "            print(\"New size: \" + str(len(queue)))\n" +
+            "\n" +
+            "        if choice == 2:\n" +
+            "            if len(queue) < 1:\n" +
+            "                print(\"Error\")\n" +
+            "\n" +
+            "            else:\n" +
+            "                print(\"Dequeue: \"+ str(queue.pop(0)))\n" +
+            "\n" +
+            "                # Prints the new size of the queue\n" +
+            "                print(\"New size: \" + str(len(queue)))\n"
+    }],
+    algorithmTree: [{
+        _id: "13",
+        name: "Tree",
+        algo: "root = None\n" +
+            "\n" +
+            "ch=0\n" +
+            "\n" +
+            "# First we need to create the class\n" +
+            "class node:\n" +
+            "\n" +
+            "    def __init__(self):\n" +
+            "        self.data = \"\"\n" +
+            "        self.left = None\n" +
+            "        self.right = None\n" +
+            "\n" +
+            "\n"
+        },
+        {
+            _id: "14",
+            name: "Find max",
+            algo: "            def findMax(root):\\n\" +\n" +
+                "                if root.right is None:" + "\n" +
+                "                    print(root)" + "\n" +
+                "                else:" + "\n" +
+                "                    findMax(root.right)" + "\n"
+        },
+        {
+            _id: "15",
+            name: "Count nodes",
+            algo: "            def countNodes(root):" + "\n" +
+                "                sum=0 " + "\n" +
+                "                if root is not None:"  + "\n" +
+                "                    sum= countNodes(root.left)" + "\n" +
+                "                    sum+= 1" + "\n" +
+                "                    sum+= countNodes(root.right)" + "\n" +
+                "                return sum" + "\n"
+        },
+        {
+            _id: "16",
+            name: "Insert Data ",
+            algo: "            def insertTree(root, dat): " + "\n" +
+                "                if dat.data <= root.data: " + "\n" +
+                "                    if root.left is None: " + "\n"
+        },
+        {
+            _id: "17",
+            name: "Print the tree",
+            algo: "            def showTree(root):" + "\n" +
+                "                if root != None:" + "\n" +
+                "                    showTree(root.left)" + "\n" +
+                "                    print(root.data)" + "\n" +
+                "                    showTree(root.right)"
+        },
+        {
+            _id: "18",
+            name: "Create Node",
+            algo: "def createNode():\n" +
+                "    root = node()\n" +
+                "    print(\"Give data: \")\n" +
+                "    dat = int(input())\n" +
+                "    root.data = dat\n" +
+                "\n" +
+                "    return root\n" +
+                "\n" +
+
+                "        else:\n" +
+                "            insertTree(root.left, dat)\n" +
+                "\n" +
+                "    if dat.data > root.data:\n" +
+                "        if root.right is None:\n" +
+                "            root.right = dat\n" +
+                "        else:\n" +
+                "            insertTree(root.right, dat)\n" +
+                "\n"
+        }]
 }

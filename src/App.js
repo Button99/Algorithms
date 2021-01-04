@@ -5,6 +5,9 @@ import ArrayMainScreen from "./screens/ArrayMainScreen";
 import ArrayClassificationMainScreen from "./screens/ArrayClassificationMainScreen";
 import StringSearchScreen from "./screens/StringMainScreen";
 import React from "react";
+import StackScreen from "./screens/StackScreen";
+import QueueScreen from "./screens/QueueScreen";
+import TreeScreen from "./screens/TreeScreen";
 
 function App() {
   return (
@@ -31,6 +34,15 @@ function App() {
             <li>
               <NavLink to="/StringMainScreen">String Search</NavLink>
             </li>
+            <li>
+              <NavLink to="/StackMainScreen">Stack</NavLink>
+            </li>
+            <li>
+              <NavLink to="/QueueMainScreen">Queue</NavLink>
+            </li>
+            <li>
+              <NavLink to="/TreeMainScreen">Tree</NavLink>
+            </li>
           </ul>
         </div>
       </nav>
@@ -40,6 +52,10 @@ function App() {
         <Route path="/ArrayMainScreen" component={ArrayMainScreen} />
         <Route path="/ArrayClassificationMainScreen" component={ArrayClassificationMainScreen} />
         <Route path="/StringMainScreen" component={StringSearchScreen} />
+        <Route path="/StackMainScreen" component={StackScreen} />
+        <Route path="/QueueMainScreen" component={QueueScreen} />
+        <Route path="/TreeMainScreen" component={TreeScreen} />
+
       </Switch>
     </body>
   </BrowserRouter>
